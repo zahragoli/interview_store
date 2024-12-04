@@ -11,3 +11,12 @@
 درمورد لایه ها هم باید بگم که پر ارزش ترین لایه میشه لایه ی core که این لایهentityهای ما رو تو خودشون جا دادن
 لایه use case درواق سعی میکنه business logic رو هندل کنه
 لایه ی frameworkمختص سرویس هایی هست که استفاده میشه مثلا سرویس  uthenticationکه من از jwt token کمک گرفتم
+
+
+پروژه با دستور npm start  ران میشه
+
+لینک apidoc پروژه این هست:
+https://documenter.getpostman.com/view/29231133/2sAYBaAVFX
+
+البته export این api doc هم روی پروژه در آدرس زیر موجود هست
+interview_store/blubank.postman_collection.json
