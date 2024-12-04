@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { Order } from '../../use-case/order/order.entity';
-import { User } from './user.entity';
-import { Product } from './product.entity';
+import { Order } from '../../core/entities/order.entity';
+import { User } from '../../core/entities/user.entity';
+import { Product } from '../../core/entities/product.entity';
 
 @Injectable()
 export class OrderService {
@@ -13,13 +13,12 @@ export class OrderService {
   ) {}
 
   createOrder(user: User, product: Product, state: string): Promise<Order> {
-    // @ts-ignore
+    console.log(user, product, state);
     const order = this.orderRepository.create({
       user,
       product,
       state,
     });
-    // @ts-ignore
     return this.orderRepository.save(order);
   }
 

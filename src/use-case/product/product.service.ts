@@ -31,10 +31,14 @@ export class ProductService {
 
   findOne(id: number): Promise<Product> {
     // @ts-ignore
-    return this.productRepository.findOneBy(id);
+    return this.productRepository.findOne({
+      where: { id },
+    });
   }
 
   async decrementProduct(id: number) {
+    console.log('id')
+    console.log(id);
     await this.productRepository
       .createQueryBuilder()
       .update(Product)

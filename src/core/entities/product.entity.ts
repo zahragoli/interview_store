@@ -1,5 +1,5 @@
 import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm';
-import { Order } from '../../use-case/order/order.entity';
+import { Order } from './order.entity';
 
 @Entity()
 export class Product {
@@ -18,6 +18,6 @@ export class Product {
   @Column()
   stuck: number;
 
-  @OneToMany(() => Order, (order) => order.product)
+  @OneToMany(() => Order, (order) => order.product, { cascade: true })
   orders: Order[];
 }
