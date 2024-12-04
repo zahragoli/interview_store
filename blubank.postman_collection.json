@@ -1,0 +1,816 @@
+{
+	"info": {
+		"_postman_id": "86744f39-86bc-4abf-a2f4-cd9c8a156e47",
+		"name": "blubank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29231133"
+	},
+	"item": [
+		{
+			"name": "create users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"name\": \"زهرا گل محمدی\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "successfull",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"name\": \"زهرا گل محمدی\" }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "42"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2a-RF/vlOsZXG5O5Paja0BphMzRfEo\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 04 Dec 2024 12:07:21 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"زهرا گل محمدی\",\n    \"id\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "get users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"name\": \"Item1\", \"description\": \"A test item\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "successfull",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"name\": \"Item1\", \"description\": \"A test item\" }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "44"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2c-LSH6OfvD1Lb1LJXyla8TBLYdiCM\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 04 Dec 2024 12:07:49 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"زهرا گل محمدی\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "create products",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n    \"name\": \"laptop 1\", \n    \"price\": 70000000,\n    \"description\":\"کیفیت صفحه نمایش OLED این مدل لپ تاپ فوق العاده بوده و به لطف وضوح تصویر ۲۸۸۰×۱۸۰۰ پیکسل و نرخ به‌روز رسانی تصویر ۱۲۰ هرتز می‌توان از این صفحه نمایش برای تجربه‌ی کارهای گرافیکی نیز استفاده کرد. همچنین صفحه نمایش این مدل لپ تاپ از قلم مخصوص نوری پشتیبانی می‌کند و صفحه نمایش دارای تاییدیه‌‌های مختلف و معتبر نظیر Pantone و VESA است\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "successfull",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n    \"name\": \"laptop 1\", \n    \"price\": 70000000,\n    \"description\":\"کیفیت صفحه نمایش OLED این مدل لپ تاپ فوق العاده بوده و به لطف وضوح تصویر ۲۸۸۰×۱۸۰۰ پیکسل و نرخ به‌روز رسانی تصویر ۱۲۰ هرتز می‌توان از این صفحه نمایش برای تجربه‌ی کارهای گرافیکی نیز استفاده کرد. همچنین صفحه نمایش این مدل لپ تاپ از قلم مخصوص نوری پشتیبانی می‌کند و صفحه نمایش دارای تاییدیه‌‌های مختلف و معتبر نظیر Pantone و VESA است\",\n    \"stuck\":8 }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "658"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"292-eGy2q7+VOFQPU8y+B2IgDMvR7xI\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 04 Dec 2024 12:08:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"laptop 1\",\n    \"description\": \"کیفیت صفحه نمایش OLED این مدل لپ تاپ فوق العاده بوده و به لطف وضوح تصویر ۲۸۸۰×۱۸۰۰ پیکسل و نرخ به\\u200cروز رسانی تصویر ۱۲۰ هرتز می\\u200cتوان از این صفحه نمایش برای تجربه\\u200cی کارهای گرافیکی نیز استفاده کرد. همچنین صفحه نمایش این مدل لپ تاپ از قلم مخصوص نوری پشتیبانی می\\u200cکند و صفحه نمایش دارای تاییدیه\\u200c\\u200cهای مختلف و معتبر نظیر Pantone و VESA است\",\n    \"price\": 70000000,\n    \"stuck\": 8,\n    \"id\": 1\n}"
+				},
+				{
+					"name": "failed",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n    \"name\": \"laptop 1\", \n    \"price\": 70000000,\n    \"description\":\"کیفیت صفحه نمایش OLED این مدل لپ تاپ فوق العاده بوده و به لطف وضوح تصویر ۲۸۸۰×۱۸۰۰ پیکسل و نرخ به‌روز رسانی تصویر ۱۲۰ هرتز می‌توان از این صفحه نمایش برای تجربه‌ی کارهای گرافیکی نیز استفاده کرد. همچنین صفحه نمایش این مدل لپ تاپ از قلم مخصوص نوری پشتیبانی می‌کند و صفحه نمایش دارای تاییدیه‌‌های مختلف و معتبر نظیر Pantone و VESA است\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "96"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"60-JgVLMIEZaJzya/WGmZjQNPOe1HI\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 04 Dec 2024 12:10:20 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 1,\n    \"description\": {\n        \"fa\": \"عملیات دچار مشکل شد.\",\n        \"en\": \"Operation failed\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "get products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "successfull",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/products/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "658"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"292-a29m2hh9rlhZCDJ/U/xoDKQhVII\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 04 Dec 2024 12:10:47 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"name\": \"laptop 1\",\n    \"description\": \"کیفیت صفحه نمایش OLED این مدل لپ تاپ فوق العاده بوده و به لطف وضوح تصویر ۲۸۸۰×۱۸۰۰ پیکسل و نرخ به\\u200cروز رسانی تصویر ۱۲۰ هرتز می\\u200cتوان از این صفحه نمایش برای تجربه\\u200cی کارهای گرافیکی نیز استفاده کرد. همچنین صفحه نمایش این مدل لپ تاپ از قلم مخصوص نوری پشتیبانی می\\u200cکند و صفحه نمایش دارای تاییدیه\\u200c\\u200cهای مختلف و معتبر نظیر Pantone و VESA است\",\n    \"price\": 70000000,\n    \"stuck\": 8\n}"
+				}
+			]
+		},
+		{
+			"name": "purchase",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoi2LLZh9ix2Kcg2q_ZhCDZhdit2YXYr9uMIiwiaWF0IjoxNzMzMzEzODA1LCJleHAiOjE3MzMzMTc0MDV9.MV08S5UhTS7r4gVBxW6YDUTlW7T4_wAVuNSMaRpQB9g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\"productId\": 3, \"state\": \"done\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/orders/purchase",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"orders",
+						"purchase"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "not found",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\"productId\": 3, \"state\": \"done\" }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/orders/purchase",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"orders",
+								"purchase"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "110"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"6e-ftwZfa3fRZfxNwjfN/BcpEBjP08\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 04 Dec 2024 12:36:53 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 1,\n    \"description\": {\n        \"fa\": \"محصول مورد نظر یافت نشد \",\n        \"en\": \"product does not exist \"\n    }\n}"
+				},
+				{
+					"name": "successfull",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\"productId\": 2, \"state\": \"done\" }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/orders/purchase",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"orders",
+								"purchase"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "742"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2e6-1Hz0j29+xPZS56CrrvggXqhusEk\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 04 Dec 2024 12:37:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"state\": \"done\",\n    \"user\": {\n        \"id\": 1,\n        \"name\": \"زهرا گل محمدی\"\n    },\n    \"product\": {\n        \"id\": 2,\n        \"name\": \"laptop 1\",\n        \"description\": \"کیفیت صفحه نمایش OLED این مدل لپ تاپ فوق العاده بوده و به لطف وضوح تصویر ۲۸۸۰×۱۸۰۰ پیکسل و نرخ به\\u200cروز رسانی تصویر ۱۲۰ هرتز می\\u200cتوان از این صفحه نمایش برای تجربه\\u200cی کارهای گرافیکی نیز استفاده کرد. همچنین صفحه نمایش این مدل لپ تاپ از قلم مخصوص نوری پشتیبانی می\\u200cکند و صفحه نمایش دارای تاییدیه\\u200c\\u200cهای مختلف و معتبر نظیر Pantone و VESA است\",\n        \"price\": 70000000,\n        \"stuck\": 2\n    },\n    \"id\": 3\n}"
+				},
+				{
+					"name": "out of stuck",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\"productId\": 2, \"state\": \"done\" }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/orders/purchase",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"orders",
+								"purchase"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "151"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"97-0FhgbAfA+OQJuOqY65S+xQx47HE\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 04 Dec 2024 12:38:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 1,\n    \"description\": {\n        \"fa\": \"موجودی محصول مورد نظر به اتمام رسیده است \",\n        \"en\": \"selected product is out of stuck \"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "deleteproducts",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/products/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "successfull",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/products/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 04 Dec 2024 12:19:49 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "get token",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/get_token/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"get_token",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "successfull",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/get_token/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"get_token",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "205"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"cd-Jrxb0abpsDSRc7JcYG7oBV97Kr0\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 04 Dec 2024 12:41:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoi2LLZh9ix2Kcg2q_ZhCDZhdit2YXYr9uMIiwiaWF0IjoxNzMzMzE2MDg1LCJleHAiOjE3MzMzMTk2ODV9.m_zVigRy6sDEf1f8O0Mlff6_i3RX7cDHZ7geuwevdwM\"\n}"
+				}
+			]
+		}
+	]
+}
