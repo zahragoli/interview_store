@@ -19,4 +19,4 @@
 https://documenter.getpostman.com/view/29231133/2sAYBaAVFX
 
 البته export این api doc هم روی پروژه در آدرس زیر موجود هست
-interview_store/blubank.postman_collection.json
+interview_store/bluebank.postman_collection.json
