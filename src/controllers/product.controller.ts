@@ -7,17 +7,22 @@ import {
   Delete,
   HttpStatus,
   UseFilters,
-} from "@nestjs/common";
+  UseGuards,
+  Req,
+} from '@nestjs/common';
 import { Product } from '../core/entities/product.entity';
 import { ProductService } from '../use-case/product/product.service';
 import { AppError } from '../error-handling/app.error';
 import { GENERAL_CODES } from '../error-handling/consts/codes/general-codes';
 import { HttpExceptionFilter } from '../error-handling/http-exception.filter';
+import { JwtAuthGuard } from '../guards/jwt-auth.guard';
+
 @UseFilters(HttpExceptionFilter)
 @Controller('products')
 export class ProductController {
   constructor(private readonly productService: ProductService) {}
 
+  @UseGuards(JwtAuthGuard)
   @Post()
   create(
     @Body()
@@ -54,8 +59,17 @@ export class ProductController {
     return this.productService.findOne(id);
   }
 
+  @UseGuards(JwtAuthGuard)
   @Delete(':id')
-  remove(@Param('id') id: number): Promise<void> {
-    return this.productService.remove(id);
+  async remove(@Param('id') id: number) {
+    const deleteResult = await this.productService.remove(id);
+    if (deleteResult > 0) {
+      return {
+        message: 'محصول مورد نظر حذف شد',
+      };
+    }
+    return {
+      message : "محصول مورد نظر موجود نیست"
+    };
   }
 }

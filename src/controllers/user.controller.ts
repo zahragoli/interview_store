@@ -4,7 +4,6 @@ import {
   Post,
   Body,
   Param,
-  NotFoundException,
   HttpStatus,
   UseFilters,
 } from '@nestjs/common';

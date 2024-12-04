@@ -37,8 +37,6 @@ export class ProductService {
   }
 
   async decrementProduct(id: number) {
-    console.log('id')
-    console.log(id);
     await this.productRepository
       .createQueryBuilder()
       .update(Product)
@@ -47,7 +45,8 @@ export class ProductService {
       .execute();
   }
 
-  async remove(id: number): Promise<void> {
-    await this.productRepository.delete(id);
+  async remove(id: number) {
+    const deleted = await this.productRepository.delete(id);
+    return deleted.affected;
   }
 }

@@ -75,13 +75,4 @@ export class OrderController {
     );
   }
 
-  @Get()
-  findAll() {
-    return this.orderService.findAll();
-  }
-
-  @Get('user/:userId')
-  findByUser(@Param('userId') userId: number) {
-    return this.orderService.findByUser(userId);
-  }
 }

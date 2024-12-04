@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "86744f39-86bc-4abf-a2f4-cd9c8a156e47",
-		"name": "blubank",
+		"_postman_id": "daea216c-957d-467e-b34c-5eaecbe2f357",
+		"name": "blubank Copy",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "29231133"
 	},
@@ -132,15 +132,6 @@
 					"originalRequest": {
 						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{ \"name\": \"Item1\", \"description\": \"A test item\" }",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
 							"raw": "http://localhost:3000/users",
 							"protocol": "http",
@@ -194,11 +185,21 @@
 		{
 			"name": "create products",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{ \n    \"name\": \"laptop 1\", \n    \"price\": 70000000,\n    \"description\":\"کیفیت صفحه نمایش OLED این مدل لپ تاپ فوق العاده بوده و به لطف وضوح تصویر ۲۸۸۰×۱۸۰۰ پیکسل و نرخ به‌روز رسانی تصویر ۱۲۰ هرتز می‌توان از این صفحه نمایش برای تجربه‌ی کارهای گرافیکی نیز استفاده کرد. همچنین صفحه نمایش این مدل لپ تاپ از قلم مخصوص نوری پشتیبانی می‌کند و صفحه نمایش دارای تاییدیه‌‌های مختلف و معتبر نظیر Pantone و VESA است\"}",
+					"raw": "{ \n    \"name\": \"laptop 1\", \n    \"price\": 70000000,\n    \"description\":\"کیفیت صفحه نمایش OLED این مدل لپ تاپ فوق العاده بوده و به لطف وضوح تصویر ۲۸۸۰×۱۸۰۰ پیکسل و نرخ به‌روز رسانی تصویر ۱۲۰ هرتز می‌توان از این صفحه نمایش برای تجربه‌ی کارهای گرافیکی نیز استفاده کرد. همچنین صفحه نمایش این مدل لپ تاپ از قلم مخصوص نوری پشتیبانی می‌کند و صفحه نمایش دارای تاییدیه‌‌های مختلف و معتبر نظیر Pantone و VESA است\",\n    \"stuck\":8}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -218,68 +219,6 @@
 				}
 			},
 			"response": [
-				{
-					"name": "successfull",
-					"originalRequest": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{ \n    \"name\": \"laptop 1\", \n    \"price\": 70000000,\n    \"description\":\"کیفیت صفحه نمایش OLED این مدل لپ تاپ فوق العاده بوده و به لطف وضوح تصویر ۲۸۸۰×۱۸۰۰ پیکسل و نرخ به‌روز رسانی تصویر ۱۲۰ هرتز می‌توان از این صفحه نمایش برای تجربه‌ی کارهای گرافیکی نیز استفاده کرد. همچنین صفحه نمایش این مدل لپ تاپ از قلم مخصوص نوری پشتیبانی می‌کند و صفحه نمایش دارای تاییدیه‌‌های مختلف و معتبر نظیر Pantone و VESA است\",\n    \"stuck\":8 }",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:3000/products",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"products"
-							]
-						}
-					},
-					"status": "Created",
-					"code": 201,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "X-Powered-By",
-							"value": "Express"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json; charset=utf-8"
-						},
-						{
-							"key": "Content-Length",
-							"value": "658"
-						},
-						{
-							"key": "ETag",
-							"value": "W/\"292-eGy2q7+VOFQPU8y+B2IgDMvR7xI\""
-						},
-						{
-							"key": "Date",
-							"value": "Wed, 04 Dec 2024 12:08:16 GMT"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "Keep-Alive",
-							"value": "timeout=5"
-						}
-					],
-					"cookie": [],
-					"body": "{\n    \"name\": \"laptop 1\",\n    \"description\": \"کیفیت صفحه نمایش OLED این مدل لپ تاپ فوق العاده بوده و به لطف وضوح تصویر ۲۸۸۰×۱۸۰۰ پیکسل و نرخ به\\u200cروز رسانی تصویر ۱۲۰ هرتز می\\u200cتوان از این صفحه نمایش برای تجربه\\u200cی کارهای گرافیکی نیز استفاده کرد. همچنین صفحه نمایش این مدل لپ تاپ از قلم مخصوص نوری پشتیبانی می\\u200cکند و صفحه نمایش دارای تاییدیه\\u200c\\u200cهای مختلف و معتبر نظیر Pantone و VESA است\",\n    \"price\": 70000000,\n    \"stuck\": 8,\n    \"id\": 1\n}"
-				},
 				{
 					"name": "failed",
 					"originalRequest": {
@@ -341,6 +280,68 @@
 					],
 					"cookie": [],
 					"body": "{\n    \"status\": 1,\n    \"description\": {\n        \"fa\": \"عملیات دچار مشکل شد.\",\n        \"en\": \"Operation failed\"\n    }\n}"
+				},
+				{
+					"name": "successfull",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n    \"name\": \"laptop 1\", \n    \"price\": 70000000,\n    \"description\":\"کیفیت صفحه نمایش OLED این مدل لپ تاپ فوق العاده بوده و به لطف وضوح تصویر ۲۸۸۰×۱۸۰۰ پیکسل و نرخ به‌روز رسانی تصویر ۱۲۰ هرتز می‌توان از این صفحه نمایش برای تجربه‌ی کارهای گرافیکی نیز استفاده کرد. همچنین صفحه نمایش این مدل لپ تاپ از قلم مخصوص نوری پشتیبانی می‌کند و صفحه نمایش دارای تاییدیه‌‌های مختلف و معتبر نظیر Pantone و VESA است\",\n    \"stuck\":8}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "658"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"292-xC+9XYy/uPfm8NWnuOPzPxMVm3s\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 04 Dec 2024 14:14:17 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"laptop 1\",\n    \"description\": \"کیفیت صفحه نمایش OLED این مدل لپ تاپ فوق العاده بوده و به لطف وضوح تصویر ۲۸۸۰×۱۸۰۰ پیکسل و نرخ به\\u200cروز رسانی تصویر ۱۲۰ هرتز می\\u200cتوان از این صفحه نمایش برای تجربه\\u200cی کارهای گرافیکی نیز استفاده کرد. همچنین صفحه نمایش این مدل لپ تاپ از قلم مخصوص نوری پشتیبانی می\\u200cکند و صفحه نمایش دارای تاییدیه\\u200c\\u200cهای مختلف و معتبر نظیر Pantone و VESA است\",\n    \"price\": 70000000,\n    \"stuck\": 8,\n    \"id\": 4\n}"
 				}
 			]
 		},
@@ -667,12 +668,12 @@
 			},
 			"response": [
 				{
-					"name": "successfull",
+					"name": "unuthorized",
 					"originalRequest": {
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/products/1",
+							"raw": "http://localhost:3000/products/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -680,21 +681,33 @@
 							"port": "3000",
 							"path": [
 								"products",
-								"1"
+								"2"
 							]
 						}
 					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "plain",
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
 					"header": [
 						{
 							"key": "X-Powered-By",
 							"value": "Express"
 						},
 						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "96"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"60-JgVLMIEZaJzya/WGmZjQNPOe1HI\""
+						},
+						{
 							"key": "Date",
-							"value": "Wed, 04 Dec 2024 12:19:49 GMT"
+							"value": "Wed, 04 Dec 2024 14:03:11 GMT"
 						},
 						{
 							"key": "Connection",
@@ -703,14 +716,64 @@
 						{
 							"key": "Keep-Alive",
 							"value": "timeout=5"
-						},
-						{
-							"key": "Content-Length",
-							"value": "0"
 						}
 					],
 					"cookie": [],
-					"body": null
+					"body": "{\n    \"status\": 1,\n    \"description\": {\n        \"fa\": \"عملیات دچار مشکل شد.\",\n        \"en\": \"Operation failed\"\n    }\n}"
+				},
+				{
+					"name": "successfull",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/products/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products",
+								"5"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "52"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"34-UqKkFHOHRORL7YM3P5jvb0IuhE0\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 04 Dec 2024 14:35:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"محصول مورد نظر حذف شد\"\n}"
 				}
 			]
 		},
@@ -751,15 +814,6 @@
 					"originalRequest": {
 						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
 							"raw": "http://localhost:3000/users/get_token/1",
 							"protocol": "http",
